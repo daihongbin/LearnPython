@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app.apps.AppConfig',
+    'learn', # 新加入的app在此处配置
+    'calc',
 ]
 
 MIDDLEWARE = [
