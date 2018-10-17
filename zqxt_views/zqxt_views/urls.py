@@ -19,7 +19,9 @@ from django.contrib import admin
 from calc import views as calc_views
 
 urlpatterns = [
+    url(r'^add/(\d+)/(\d+)/$',calc_views.old_add2_redirect),
+    url(r'^$',calc_views.index,name='home'), #首页视图
     url(r'^add/$',calc_views.add,name='add'), #注意，修改了这一行
-    url(r'^add/(\d+)/(\d+)/$',calc_views.add2,name='add2'), #add2/3/4
+    url(r'^new_add/(\d+)/(\d+)/$',calc_views.add2,name='add2'), #add2/3/4
     url(r'^admin/', admin.site.urls),
 ]
