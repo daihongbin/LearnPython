@@ -1,0 +1,29 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}默认标题{% endblock %}-zqxt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    {% include 'nav.html' %}
+    {% block content %}
+    <div>
+        这里是默认内容，所有继承自这个模板的，如果不覆盖就显示这里的默认内容。
+    </div>
+    {% endblock %}
+
+    {% include 'bottom.html' %}
+    {% include 'tongji.html' %}
+</body>
+</html>
+
+{#{% extends 'base.html' %}#}
+{# #}
+{#{% block title %}欢迎光临首页{% endblock %}#}
+{# #}
+{#{% block content %}#}
+{#{% include 'ad.html' %}#}
+{#这里是首页，欢迎光临#}
+{#{% endblock %}#}
