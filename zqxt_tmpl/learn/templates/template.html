@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模板</title>
+</head>
+<body>
+    {% url 'add' 4 5 %}
+
+{#    使用 as 语句将内容取别名（相当于定义一个变量），多次使用（但视图名称到网址转换只进行了一次）#}
+    {% url 'https://www.baidu.com' 1 2 as the_url %}
+    <a href="{{ the_url }}">链接到：{{ the_url }}</a>
+</body>
+</html>

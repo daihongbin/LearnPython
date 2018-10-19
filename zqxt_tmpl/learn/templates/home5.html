@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模板中的逻辑操作</title>
+    <style>
+        div{
+            border-bottom: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    {% if a >= 90 %}
+        优秀
+    {% elif a >= 80 %}
+        良好
+    {% elif a >= 70 %}
+        一般
+    {% elif a >= 60 %}
+        需要努力
+    {% else %}
+        不及格
+    {% endif %}
+    </div>
+
+    <p>判断num是不是在0到100之间：</p>
+    <div>
+        {% if a <= 100 and a >= 0 %}
+            num在0到100之间
+        {% else %}
+            数值不在范围之内。
+        {% endif %}
+    </div>
+
+    <p>判断‘123’在不在一个列表变量List中</p>
+    <div>
+         {% if '123' in strList %}
+            在名单中
+         {% endif %}
+    </div>
+</body>
+</html>

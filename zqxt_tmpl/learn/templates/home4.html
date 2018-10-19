@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>进行条件判断和for循环操作</title>
+</head>
+<body>
+    {% for item in List %}
+        {{ item }}
+        {% if not forloop.last %}
+            ,
+        {% endif %}
+    {% endfor %}
+
+{#    forloop.counter	索引从 1 开始算#}
+{#    forloop.counter0	索引从 0 开始算#}
+{#    forloop.revcounter	索引从最大长度到 1#}
+{#    forloop.revcounter0	索引从最大长度到 0#}
+{#    forloop.first	当遍历的元素为第一项时为真#}
+{#    forloop.last	当遍历的元素为最后一项时为真#}
+{#    forloop.parentloop	#}
+{#    用在嵌套的 for 循环中，#}
+{#    #}
+{#    获取上一层 for 循环的 forloop#}
+
+{# 列表可能为空时 #}
+<ul>
+{% for item in List %}
+    <li>{{ item }}</li>
+{% empty %}
+    <li>抱歉，列表为空</li>
+{% endfor %}
+</ul>
+</body>
+</html>

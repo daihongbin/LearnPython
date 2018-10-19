@@ -19,6 +19,14 @@ from django.contrib import admin
 from learn import views as learn_views
 
 urlpatterns = [
+    url(r'^home5/$',learn_views.home5,name='home5'),
+    url(r'^jiafa/(\d+)/(\d+)/$',learn_views.add,name='add'),
+    #url(r'^add/(\d+)/(\d+)/$',learn_views.add,name='add'),
+    url(r'^home4/$',learn_views.home4,name='home4'),
+    url(r'^home3/$',learn_views.home3,name='home3'),
+    url(r'^home2/$',learn_views.home2,name='home2'),
+    url(r'^home1/$',learn_views.home1,name='home1'),
+    url(r'^template/$',learn_views.template,name='template'),
     url(r'^$',learn_views.home,name='home'),
     url(r'^admin/', admin.site.urls),
 ]

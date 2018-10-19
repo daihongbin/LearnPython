@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取当前网址和当前用户</title>
+</head>
+<body>
+    当前用户：{{ request.user }}
+    <hr/>
+    {% if request.user.is_authenticated %}
+        {{ request.user.username }},您好
+    {% else %}
+        请登录
+    {% endif %}
+    <hr/>
+    当前网址：{{ request.path }}
+    当前GET参数：{{ request.urlencode }}
+    <a href="{{ request.path }}?{{ request.GET.urlencode }}&delete=1">当前网址加参数 delete</a>
+</body>
+</html>
