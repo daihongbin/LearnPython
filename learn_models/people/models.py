@@ -7,3 +7,7 @@ class Person(models.Model):
 
     def __str__(self):
         return self.name
+
+# 生成模型后，所用命令
+# python manage.py makemigrations
+# python manage.py migrate
